@@ -38,14 +38,19 @@ retail-product-api/ ├── backend/ # Java Spring Boot app └── frontend
 ```bash
 git https://github.com/vidhyavijayantech/retail-product-api.git
 cd retail-product-api/product-api-backend
+```
 
 2. Build 
+```bash
 mvn clean install
+```
 
 3. Run
+```bash
 mvn spring-boot:run
+```
 
-📦 API Endpoints
+## 📦 API Endpoints
 
 Method | Endpoint           | Description
 POST   | /api/products      | Create a new product
@@ -55,65 +60,60 @@ GET    | /api/product-types | Get available product types
 GET    | /api/colours       | Get available colours
 
 
-🧪 Sample Data
+## 🧪 Sample Data
 On application startup, the app loads sample data into the in-memory H2 database automatically.
 We use the data.sql file located in src/main/resources to insert initial records for ProductType and Colour.
 
-🖥️ Frontend Setup (React + Vite + TypeScript)
-✅ Requirements
+# 🖥️ Frontend Setup (React + Vite + TypeScript)
+## ✅ Requirements
 Node.js (v18+ recommended)
 npm 
 
-🔌 Run Locally
+## 🔌 Run Locally
 
 Open a new terminal and navigate to frontend:
+```bash
 cd etail-product-api/product-api-frontend
+```
 
-Install dependencies:
+### Install dependencies:
 
+```bash
 npm install
+```
 
-Run development server:
+### Run development server:
 
+```bash
 npm run dev
+```
+
 The app should be available at http://localhost:5173
 
-🌐 Proxy Setup
+### 🌐 Proxy Setup
 vite.config.ts includes a proxy so API calls from the frontend are directed to the backend running on port 8080.
 
-🧪 Running Tests
-Backend Tests
-
-mvn test
-Frontend Tests
-bash
-Copy
-Edit
+### 🧪 Running Tests
+```bash
 npm run test
+```
+
 Make sure you have vitest installed for running React unit tests.
 
-🧰 Technologies Used
-Backend
-Java 17
+## 🧰 Technologies Used
 
-Spring Boot
-
-Spring Data JPA
-
-PostgreSQL / H2
-
+### Backend
+Java 17,
+Spring Boot,
+Spring Data JPA,
+H2,
 Lombok
 
-Frontend
-React
-
-Vite
-
-TypeScript
-
+### Frontend
+React,
+Vite,
+TypeScript,
 React Router
-
-Tailwind CSS (optional)
 
 
 
