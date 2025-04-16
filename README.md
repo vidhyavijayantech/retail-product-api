@@ -16,10 +16,11 @@ A full-stack application for managing products, their types, and colours. Built 
 ---
 
 ## 📁 Project Structure
-
+<pre lang="markdown">
 retail-product-api/
 ├── product-api-backend/         # Java Spring Boot app
 └── product-api-frontend/        # React + Vite TypeScript app
+</pre>
 
 
 ---
@@ -68,8 +69,8 @@ We use the data.sql file located in src/main/resources to insert initial records
 
 # 🖥️ Frontend Setup (React + Vite + TypeScript)
 ## ✅ Requirements
-Node.js (v18+ recommended)
-npm 
+- Node.js (v18+ recommended)
+- npm 
 
 ## 🔌 Run Locally
 
@@ -105,17 +106,17 @@ Make sure you have vitest installed for running React unit tests.
 ## 🧰 Technologies Used
 
 ### Backend
-Java 17,
-Spring Boot,
-Spring Data JPA,
-H2,
-Lombok
+- Java 17,
+- Spring Boot,
+- Spring Data JPA,
+- H2,
+- Lombok
 
 ### Frontend
-React,
-Vite,
-TypeScript,
-React Router
+- React,
+- Vite,
+- TypeScript,
+- React Router
 
 
 
