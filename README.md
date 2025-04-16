@@ -17,7 +17,9 @@ A full-stack application for managing products, their types, and colours. Built 
 
 ## 📁 Project Structure
 
-retail-product-api/ ├── backend/ # Java Spring Boot app └── frontend/ # React + Vite TypeScript app
+retail-product-api/ 
+├── backend/ # Java Spring Boot app 
+└── frontend/ # React + Vite TypeScript app
 
 
 ---
