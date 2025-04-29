@@ -10,7 +10,9 @@ import com.retail.product.api.repository.ColourRepository;
 import com.retail.product.api.repository.ProductRepository;
 import com.retail.product.api.repository.ProductTypeRepository;
 import com.retail.product.api.service.ProductService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -33,7 +35,7 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping
-    public ResponseEntity<?> createProduct(@RequestBody ProductCreateRequest req) {
+    public ResponseEntity<?> createProduct(@Valid @RequestBody ProductCreateRequest req) {
         productService.createProduct(req);
         return ResponseEntity.ok("Product created");
     }

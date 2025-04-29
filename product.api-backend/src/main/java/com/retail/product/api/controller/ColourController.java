@@ -1,6 +1,8 @@
 package com.retail.product.api.controller;
 
+import com.retail.product.api.model.Colour;
 import com.retail.product.api.repository.ColourRepository;
+import com.retail.product.api.service.ColourService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +18,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ColourController {
 
-    private final ColourRepository colourRepository;
+    private final ColourService colourService;
 
     @GetMapping
     public List<Map<String, Object>> getAllColours() {
-        return colourRepository.findAll().stream().map(colour -> {
-            Map<String, Object> map = new HashMap<>();
-            map.put("id", colour.getId());
-            map.put("name", colour.getName());
-            return map;
-        }).collect(Collectors.toList());
+        return colourService.getAllColours();
     }
 }

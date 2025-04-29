@@ -1,6 +1,7 @@
 package com.retail.product.api.controller;
 
 import com.retail.product.api.repository.ProductTypeRepository;
+import com.retail.product.api.service.ProductTypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +17,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ProductTypeController {
 
-    private final ProductTypeRepository productTypeRepository;
+    private final ProductTypeService productTypeService;
 
     @GetMapping
     public List<Map<String, Object>> getAllProductTypes() {
-        return productTypeRepository.findAll().stream().map(pt -> {
-            Map<String, Object> map = new HashMap<>();
-            map.put("id", pt.getId());
-            map.put("name", pt.getName());
-            return map;
-        }).collect(Collectors.toList());
+        return productTypeService.getAllProductTypes();
     }
 }
